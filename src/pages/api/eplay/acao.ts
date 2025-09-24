@@ -3,8 +3,10 @@ import { acao } from '@/mocks/jogos'
 import type { NextApiRequest, NextApiResponse } from 'next'
 import Cors from 'cors'
 
+
 const cors = Cors({
   methods: ['POST', 'GET', 'HEAD'],
+  origin: ['http://localhost:3000', 'https://eplay-ivory.vercel.app']
 })
 
 function runMiddleware(
